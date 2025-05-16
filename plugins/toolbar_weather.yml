@@ -1,0 +1,16 @@
+id: '@eythaann/toolbar-weather'
+icon: 'TiWeatherPartlySunny'
+target: '@seelen/fancy-toolbar'
+plugin:
+  type: text
+  withMediaControls: false
+  remoteData:
+    weather:
+      url: https://wttr.in/?format=2
+      updateIntervalSeconds: 600 # 10 minutes
+  template: >-
+    return weather ? weather.replace(/\s+/g, ' ') : '⛅...';
+  onClickV2: >-
+    open('https://wttr.in');
+  style:
+    flexShrink: 0

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Seelen-Inc/slu-lib/refs/heads/master/gen/schemas/plugin.schema.json
+id: '@eythaann/toolbar-network-host'
+icon: 'PiComputerTower'
+target: '@seelen/fancy-toolbar'
+plugin:
+  type: network
+  template: |-
+    if (!usingInterface) {
+      return [
+        icon('FaComputer'),
+        ' ',
+        '127.0.0.1',
+      ]
+    }
+
+    return [
+      Icon({ name: 'FaComputer' }),
+      ' ',
+      usingInterface.ipv4,
+    ];
+  tooltip: |-
+    return usingInterface ? ['MAC: ', usingInterface.mac] : 'No network adapter';
+  onClickV2: |-
+    open(`http://${usingInterface?.ipv4 || '127.0.0.1'}`);
+  style:
+    flexShrink: 0
