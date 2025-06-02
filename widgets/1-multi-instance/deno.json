@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "build": "deno run -A build.ts",
+    "load": "seelen-ui widget load ./dist --as 1-multi-instance",
+    "unload": "seelen-ui widget remove 1-multi-instance",
+    "dev": "deno task unload && deno task build && deno task load"
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.2.6-next.20250601190325",
+    "esbuild": "npm:esbuild@^0.25.4"
+  },
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable"
+    ],
+    "jsx": "react-jsx"
+  }
+}

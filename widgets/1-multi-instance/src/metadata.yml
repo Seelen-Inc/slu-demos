@@ -1,0 +1,7 @@
+id: '@username/multi-instance-widget'
+icon: GrMultiple
+metadata:
+  appTargetVersion: null
+  displayName: Multi Instance widget
+  description: Demo widget to test multiple instances
+instances: Multiple

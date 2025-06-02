@@ -1,0 +1,12 @@
+id: '@username/simple-widget'
+icon: GiDiceSixFacesOne
+metadata:
+  displayName: Simple Demo Widget
+  description: Testing demo widget
+settings:
+  - group:
+      - !config
+        type: input-text
+        key: testContent
+        label: Test Content
+        defaultValue: 'Go to settings to change me.'
