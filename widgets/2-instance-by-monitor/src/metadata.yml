@@ -1,0 +1,15 @@
+id: '@username/by-monitor-widget'
+icon: GrMultiple
+metadata:
+  appTargetVersion: null
+  displayName: Widget By Monitor
+  description: Demo widget to test widget replica by monitor
+instances: ReplicaByMonitor
+settings:
+  - group:
+      - !config
+        type: input-text
+        key: testContent
+        label: Test Content
+        defaultValue: 'Go to settings to change me.'
+        allowSetByMonitor: true

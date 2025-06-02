@@ -12,9 +12,8 @@ webview.setShadow(false);
 // set as desktop background widget, (background widgets won't appear on the seelen dock)
 webview.setAlwaysOnBottom(true);
 
-// whe using multiple intances, always will be one present as the main instance, this won't have an instanceId.
-// instanceId will be only present for extra instances.
-console.debug(`Hello world from instance ${widget.decoded.instanceId}`);
+// whe using replica by monitor, all replicas will have a monitorId param.
+console.debug(`Hello world from monitor: ${widget.decoded.monitorId}`);
 
 // playing with the DOM step.
 {
@@ -29,13 +28,10 @@ console.debug(`Hello world from instance ${widget.decoded.instanceId}`);
   root.style.color = bg.calcLuminance() > 128 ? "black" : "white";
   root.style.borderColor = Color.random().toHexString();
 
-  if (widget.decoded.instanceId) {
-    root.innerHTML = `<h1>Instance ID: ${widget.decoded.instanceId}</h1>`;
-  } else {
-    root.innerHTML = `<h1>I'm the main instance!</h1>`;
-  }
+  root.innerHTML = `<h1>Hello world from monitor: ${widget.decoded.monitorId}</h1>`;
 
-  // In case of use of settings, this are patched automatically, so users can have different settings for each instance
+  // In case of use of settings, this are patched automatically,
+  // so users can have different settings for each monitor replica
   const settings = await Settings.getAsync();
   const config = await settings.getCurrentWidgetConfig();
   root.innerHTML += `<p>Test Content: <b id="testContent">${config.testContent}</b></p>`;

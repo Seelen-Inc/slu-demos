@@ -5,3 +5,10 @@ metadata:
   displayName: Multi Instance widget
   description: Demo widget to test multiple instances
 instances: Multiple
+settings:
+  - group:
+      - !config
+        type: input-text
+        key: testContent
+        label: Test Content
+        defaultValue: 'Go to settings to change me.'
