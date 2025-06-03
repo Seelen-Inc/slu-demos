@@ -7,8 +7,8 @@ const isProduction = !Deno.args.includes("--dev");
 // clean dist
 if (await exists("./dist")) {
   await Deno.remove("./dist", { recursive: true });
-  await Deno.mkdir("./dist");
 }
+await Deno.mkdir("./dist");
 
 // copy files
 await Deno.copyFile("./src/index.html", "./dist/index.html");

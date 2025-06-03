@@ -1,7 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+  /* avoid scroll */
+  overflow: hidden;
+}
+
+#root {
+  /* allow the window to be dragged from that element including children */
+  app-region: drag;
 }
 
 .example {
@@ -10,4 +14,9 @@
   border-width: 3px;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

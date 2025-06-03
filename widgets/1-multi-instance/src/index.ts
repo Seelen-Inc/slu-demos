@@ -5,12 +5,8 @@ import "./index.css";
 const widget = await Widget.getCurrentAsync();
 const { webview } = widget;
 
-// configure the webview window
-webview.setDecorations(false);
-webview.setShadow(false);
-
 // set as desktop background widget, (background widgets won't appear on the seelen dock)
-webview.setAlwaysOnBottom(true);
+widget.setAsDesktopWidget();
 
 // whe using multiple intances, always will be one present as the main instance, this won't have an instanceId.
 // instanceId will be only present for extra instances.
@@ -46,5 +42,7 @@ console.debug(`Hello world from instance ${widget.decoded.instanceId}`);
   });
 }
 
+// restore last position and size, and store pos and size on user modification
+await widget.persistPositionAndSize();
 // show the widget
 webview.show();

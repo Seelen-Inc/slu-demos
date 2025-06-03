@@ -7,8 +7,8 @@ metadata:
 instances: Multiple
 settings:
   - group:
-      - !config
-        type: input-text
-        key: testContent
-        label: Test Content
-        defaultValue: 'Go to settings to change me.'
+      - config:
+          type: input-text
+          key: testContent
+          label: Test Content
+          defaultValue: 'Go to settings to change me.'

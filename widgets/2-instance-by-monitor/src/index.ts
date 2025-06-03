@@ -5,12 +5,8 @@ import "./index.css";
 const widget = await Widget.getCurrentAsync();
 const { webview } = widget;
 
-// configure the webview window
-webview.setDecorations(false);
-webview.setShadow(false);
-
-// set as desktop background widget, (background widgets won't appear on the seelen dock)
-webview.setAlwaysOnBottom(true);
+// set as overlay widget, (overlay widgets won't appear on the seelen dock)
+widget.setAsOverlayWidget();
 
 // whe using replica by monitor, all replicas will have a monitorId param.
 console.debug(`Hello world from monitor: ${widget.decoded.monitorId}`);
@@ -42,5 +38,7 @@ console.debug(`Hello world from monitor: ${widget.decoded.monitorId}`);
   });
 }
 
+// restore last position and size, and store pos and size on user modification
+await widget.persistPositionAndSize();
 // show the widget
 webview.show();

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Seelen-Inc/slu-lib/refs/heads/master/gen/schemas/widget.schema.json
 id: '@username/simple-widget'
 icon: GiDiceSixFacesOne
 metadata:
@@ -5,8 +6,8 @@ metadata:
   description: Testing demo widget
 settings:
   - group:
-      - !config
-        type: input-text
-        key: testContent
-        label: Test Content
-        defaultValue: 'Go to settings to change me.'
+      - config:
+          type: input-text
+          key: testContent
+          label: Test Content
+          defaultValue: 'Go to settings to change me.'

@@ -7,9 +7,8 @@ metadata:
 instances: ReplicaByMonitor
 settings:
   - group:
-      - !config
-        type: input-text
-        key: testContent
-        label: Test Content
-        defaultValue: 'Go to settings to change me.'
-        allowSetByMonitor: true
+      - config:
+          type: input-text
+          key: testContent
+          label: Test Content
+          defaultValue: 'Go to settings to change me.'
