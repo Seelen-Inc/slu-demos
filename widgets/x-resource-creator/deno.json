@@ -1,0 +1,25 @@
+{
+  "tasks": {
+    "build": "deno run -A build.ts",
+    "load": "seelen-ui widget load ./dist --as x-resource-creator",
+    "unload": "seelen-ui widget remove x-resource-creator",
+    "dev": "deno task unload && deno task build --dev && deno task load"
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.2.6-next.20250604010659",
+    "@types/react": "npm:@types/react@^19.1.6",
+    "js-yaml": "npm:js-yaml@^4.1.0",
+    "react": "npm:react@^19.1.0",
+    "react-dom": "npm:react-dom@^19.1.0"
+  },
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable"
+    ],
+    "jsx": "react-jsx"
+  }
+}

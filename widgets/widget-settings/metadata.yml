@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Seelen-Inc/slu-lib/refs/heads/master/gen/schemas/widget.schema.json
 id: '@username/multi-instance-widget'
 icon: HiOutlineClock
 metadata:
@@ -7,176 +8,172 @@ metadata:
 instances: Multiple
 settings:
   - group:
-      - !config
-        type: switch
-        key: testValue
-        label: Test Value
-        defaultValue: false
-      - !config
-        type: select
-        key: testValue2
-        label: Test Value 2
-        subtype: List
-        options:
-          - label: Option 1
-            value: option1
-          - label: Option 2
-            value: option2
-          - label: Option 3
-            value: option3
-          - label: Option 4
-            value: option4
-      - !config
-        type: input-text
-        key: testValue3
-        label: Test Value 3
-      - !config
-        type: input-number
-        key: testValue4
-        label: Test Value 4
-        defaultValue: 5
-        min: 0
-        max: 10
-        step: 1
-      - !config
-        type: range
-        key: testValue5
-        label: Test Value 5
-        from: 0
-        to: 10
-        step: 1
-      - !config
-        type: color
-        key: testValue6
-        label: Test Value 6
-        defaultValue: '#005500'
-        allowAlpha: false
+      - config:
+          type: switch
+          key: testValue
+          label: Test Value
+          defaultValue: false
+      - config:
+          type: select
+          key: testValue2
+          label: Test Value 2
+          subtype: List
+          options:
+            - label: Option 1
+              value: option1
+            - label: Option 2
+              value: option2
+            - label: Option 3
+              value: option3
+            - label: Option 4
+              value: option4
+      - config:
+          type: input-text
+          key: testValue3
+          label: Test Value 3
+      - config:
+          type: input-number
+          key: testValue4
+          label: Test Value 4
+          defaultValue: 5
+          min: 0
+          max: 10
+          step: 1
+      - config:
+          type: range
+          key: testValue5
+          label: Test Value 5
+          from: 0
+          to: 10
+          step: 1
+      - config:
+          type: color
+          key: testValue6
+          label: Test Value 6
+          defaultValue: '#005500'
+          allowAlpha: false
 
   - group:
-      - !config
-        type: switch
-        key: testValue7
-        label: Test Value 7
-        defaultValue: true
-      - !config
-        type: select
-        key: testValue8
-        label: Test Value 8
-        subtype: List
-        options:
-          - label: Option 1
-            value: option1
-          - label: Option 2
-            value: option2
-          - label: Option 3
-            value: option3
-          - label: Option 4
-            value: option4
-      - !config
-        type: input-text
-        key: testValue9
-        label: Test Value 9
-      - !config
-        type: input-number
-        key: testValue10
-        label: Test Value 10
-        defaultValue: 0
-        min: 0
-        max: 10
-        step: 1
-      - !config
-        type: range
-        key: testValue11
-        label: Test Value 11
-        from: 0
-        to: 10
-        step: 1
-      - !config
-        type: color
-        key: testValue12
-        label: Test Value 12
-        defaultValue: '#005500'
-        allowAlpha: false
+      - config:
+          type: switch
+          key: testValue7
+          label: Test Value 7
+          defaultValue: true
+      - config:
+          type: select
+          key: testValue8
+          label: Test Value 8
+          subtype: List
+          options:
+            - label: Option 1
+              value: option1
+            - label: Option 2
+              value: option2
+            - label: Option 3
+              value: option3
+            - label: Option 4
+              value: option4
+      - config:
+          type: input-text
+          key: testValue9
+          label: Test Value 9
+      - config:
+          type: input-number
+          key: testValue10
+          label: Test Value 10
+          defaultValue: 0
+          min: 0
+          max: 10
+          step: 1
+      - config:
+          type: range
+          key: testValue11
+          label: Test Value 11
+          from: 0
+          to: 10
+          step: 1
+      - config:
+          type: color
+          key: testValue12
+          label: Test Value 12
+          defaultValue: '#005500'
+          allowAlpha: false
 
   - group:
-      - !subgroup
-        header:
+      - config:
           type: switch
           key: valueToEnableTheSubGroup
           label: Subgroup Header
           defaultValue: true
-        content:
-          - !config
-            type: switch
-            key: testValue13
-            label: Test Value 13
-            defaultValue: false
-            dependencies:
-              - valueToEnableTheSubGroup
-          - !config
-            type: select
-            key: testValue14
-            label: Test Value 14
-            subtype: List
-            options:
-              - label: Option 1
-                value: 1x
-              - label: Option 2
-                value: 2x
-              - label: Option 3
-                value: 3x
-            defaultValue: 2x
-            dependencies:
-              - valueToEnableTheSubGroup
+        children:
+          - config:
+              type: switch
+              key: testValue13
+              label: Test Value 13
+              defaultValue: false
+              dependencies:
+                - valueToEnableTheSubGroup
+          - config:
+              type: select
+              key: testValue14
+              label: Test Value 14
+              subtype: List
+              options:
+                - label: Option 1
+                  value: 1x
+                - label: Option 2
+                  value: 2x
+                - label: Option 3
+                  value: 3x
+              defaultValue: 2x
+              dependencies:
+                - valueToEnableTheSubGroup
 
-      - !subgroup
-        header:
+      - config:
           type: switch
           key: valueToEnableTheSubGroup2
           label: Subgroup Header
           defaultValue: true
-        content:
-          - !config
-            type: switch
-            key: testValue15
-            label: Test Value 15
-            defaultValue: false
-            dependencies:
-              - valueToEnableTheSubGroup2
-          - !config
-            type: select
-            key: testValue16
-            label: Test Value 16
-            subtype: List
-            options:
-              - label: Option 1
-                value: 1x
-              - label: Option 2
-                value: 2x
-              - label: Option 3
-                value: 3x
-            defaultValue: 2x
-            dependencies:
-              - valueToEnableTheSubGroup2
-          - !subgroup
-            header:
+        children:
+          - config:
+              type: switch
+              key: testValue15
+              label: Test Value 15
+              defaultValue: false
+              dependencies:
+                - valueToEnableTheSubGroup2
+          - config:
+              type: select
+              key: testValue16
+              label: Test Value 16
+              subtype: List
+              options:
+                - label: Option 1
+                  value: 1x
+                - label: Option 2
+                  value: 2x
+                - label: Option 3
+                  value: 3x
+              defaultValue: 2x
+              dependencies:
+                - valueToEnableTheSubGroup2
+          - config:
               type: switch
               key: valueToEnableTheSubGroup3
               label: Nested Subgroup Header
               defaultValue: true
               dependencies:
                 - valueToEnableTheSubGroup2
-            content:
-              - !config
-                type: switch
-                key: testValue17
-                label: Test Value 17
-                defaultValue: false
-                dependencies:
-                  - valueToEnableTheSubGroup2
-                  - valueToEnableTheSubGroup3
-              - !subgroup
-                header:
+            children:
+              - config:
+                  type: switch
+                  key: testValue17
+                  label: Test Value 17
+                  defaultValue: false
+                  dependencies:
+                    - valueToEnableTheSubGroup2
+                    - valueToEnableTheSubGroup3
+              - config:
                   type: switch
                   key: valueToEnableTheSubGroup4
                   label: Nested Nested Subgroup Header
@@ -184,13 +181,13 @@ settings:
                   dependencies:
                     - valueToEnableTheSubGroup2
                     - valueToEnableTheSubGroup3
-                content:
-                  - !config
-                    type: switch
-                    key: testValue18
-                    label: Test Value 18
-                    defaultValue: false
-                    dependencies:
-                      - valueToEnableTheSubGroup2
-                      - valueToEnableTheSubGroup3
-                      - valueToEnableTheSubGroup4
+                children:
+                  - config:
+                      type: switch
+                      key: testValue18
+                      label: Test Value 18
+                      defaultValue: false
+                      dependencies:
+                        - valueToEnableTheSubGroup2
+                        - valueToEnableTheSubGroup3
+                        - valueToEnableTheSubGroup4
