@@ -3,7 +3,7 @@ import { ResourceText } from "@seelen-ui/lib/types";
 import { useCallback, useEffect, useState } from "react";
 
 interface Props {
-  path: string;
+  title: string;
   value?: ResourceText;
   onChange: (value: ResourceText) => void;
 }
@@ -35,7 +35,7 @@ function debounce<F extends (...args: any[]) => void>(func: F, wait: number): F 
   return debounced as F;
 }
 
-export function ResourceTextEditor({ path, value: propValue, onChange }: Props) {
+export function ResourceTextEditor({ title, value: propValue, onChange }: Props) {
   const [internalValue, setInternalValue] = useState(() => valueFromResourceText(propValue));
   const [loading, setLoading] = useState(false);
 
@@ -74,7 +74,7 @@ export function ResourceTextEditor({ path, value: propValue, onChange }: Props) 
   return (
     <details className="resource-text-editor">
       <summary className="resource-text-editor-summary">
-        <span className="path">{path}</span>
+        <span className="path">{title}</span>
         <div className="language">
           English
           <input

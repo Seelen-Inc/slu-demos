@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Seelen-Inc/slu-lib/refs/heads/master/gen/schemas/widget.schema.json
 id: '@username/by-monitor-widget'
 icon: GrMultiple
 metadata:

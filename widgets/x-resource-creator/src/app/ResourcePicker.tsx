@@ -1,4 +1,6 @@
 import yaml from "js-yaml";
+import { ResourceKind } from "@seelen-ui/lib";
+import { useState } from "react";
 
 declare global {
   interface Window {
@@ -7,19 +9,35 @@ declare global {
   }
 }
 
+const SchemaNames: Record<ResourceKind, string> = {
+  [ResourceKind.Theme]: "theme",
+  [ResourceKind.Plugin]: "plugin",
+  [ResourceKind.Widget]: "widget",
+  [ResourceKind.IconPack]: "icon_pack",
+  [ResourceKind.Wallpaper]: "wallpaper",
+  [ResourceKind.SoundPack]: "sound_pack",
+};
+
+function getSchemaLine(kind: ResourceKind) {
+  return `# yaml-language-server: $schema=https://raw.githubusercontent.com/Seelen-Inc/slu-lib/refs/heads/master/gen/schemas/${SchemaNames[kind]}.schema.json`;
+}
+
 interface Props {
   resource: object | null;
   onChange: (resource: object | null) => void;
 }
 
 export function ResourcePicker({ resource, onChange }: Props) {
+  const [kind, setKind] = useState<ResourceKind>(ResourceKind.Theme);
+
   return (
     <div className="resource-picker">
       <label>
         <b>Resource Kind: </b>
-        <select>
-          <option>theme</option>
-          <option>widget</option>
+        <select value={kind} onChange={(e) => setKind(e.target.value as ResourceKind)}>
+          {Object.values(ResourceKind).map((kind) => (
+            <option key={kind}>{kind}</option>
+          ))}
         </select>
       </label>
 
@@ -45,7 +63,7 @@ export function ResourcePicker({ resource, onChange }: Props) {
         onClick={async () => {
           // this works only on chrome based browsers
           try {
-            const yamlString = yaml.dump(resource);
+            const yamlString = getSchemaLine(kind) + "\n" + yaml.dump(resource);
 
             const fileHandle: FileSystemFileHandle = await globalThis.window.showSaveFilePicker({
               suggestedName: "resource.yml",

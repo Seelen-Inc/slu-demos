@@ -11,6 +11,8 @@ export function App() {
 
   const onChangeResouceText = (path: string, value: ResourceText) => {
     const parts = path.split(".");
+    console.log(parts, value);
+
     // deno-lint-ignore no-explicit-any
     setResource((currentResource: any) => {
       const newResource = JSON.parse(JSON.stringify(currentResource));
@@ -33,44 +35,77 @@ export function App() {
       <ResourcePicker resource={resource} onChange={setResource} />
 
       <ResourceTextEditor
-        path="metadata.displayName"
+        title="metadata.displayName"
         value={displayName}
         onChange={onChangeResouceText.bind(null, "metadata.displayName")}
       />
       <ResourceTextEditor
-        path="metadata.description"
+        title="metadata.description"
         value={description}
         onChange={onChangeResouceText.bind(null, "metadata.description")}
       />
 
-      <Settings settings={resource.settings || []} />
+      <Settings settings={resource.settings || []} onChange={onChangeResouceText} />
     </>
   );
 }
 
-function Settings({ settings }: { settings: Theme["settings"] | Widget["settings"] }) {
+interface SettingsProps {
+  settings: Theme["settings"] | Widget["settings"];
+  onChange: (path: string, value: ResourceText) => void;
+}
+
+function Settings({ settings, onChange }: SettingsProps) {
   return settings.map((setting, idx) => {
     if ("group" in setting) {
-      return setting.group?.map((entry) => <RenderEntry key={entry.config.key} {...entry} />);
+      return setting.group?.map((entry, entryIdx) => (
+        <RenderEntry
+          key={entry.config.key}
+          item={entry}
+          parentPath={`settings.${idx}.group.${entryIdx}`}
+          onChange={onChange}
+        />
+      ));
     }
 
     return (
       <ResourceTextEditor
         key={idx}
-        path={`settings.${idx}.label`}
+        title={setting.name}
         value={setting.label}
-        onChange={() => {}}
+        onChange={(value) => {
+          onChange(`settings.${idx}.label`, value);
+        }}
       />
     );
   });
 }
 
-function RenderEntry(item: WsdGroupEntry) {
+interface RenderEntryProps {
+  item: WsdGroupEntry;
+  parentPath: string;
+  onChange: (path: string, value: ResourceText) => void;
+}
+
+function RenderEntry({ item, parentPath, onChange }: RenderEntryProps) {
   return (
     <>
-      <ResourceTextEditor path={item.config.key} value={item.config.label} onChange={() => {}} />
-      {item.children?.map((child) => {
-        return <RenderEntry key={child.config.key} {...child} />;
+      <ResourceTextEditor
+        title={item.config.key}
+        value={item.config.label}
+        onChange={(value) => {
+          onChange(`${parentPath}.config.label`, value);
+        }}
+      />
+      {item.children?.map((child, idx) => {
+        return (
+          <RenderEntry
+            key={child.config.key}
+            item={child}
+            parentPath={`${parentPath}.children.${idx}`}
+            onChange={onChange}
+          />
+        );
       })}
     </>
   );

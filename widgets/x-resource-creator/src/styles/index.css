@@ -4,6 +4,9 @@ body {
 
 #root {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 input {
@@ -35,6 +38,13 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+details {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: 2px solid #eee;
+  padding: 10px;
 }
 
 .resource-text-editor {
