@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Seelen-Inc/slu-lib/refs/heads/master/gen/schemas/widget.schema.json
+id: '@username/date-widget'
+icon: MdOutlineDateRange
+frameless: true
+drag: false
+metadata:
+  displayName: Date Widget
+  description: Clock and Date
+settings:
+  - group:
+    - config:
+        type: switch
+        key: locked
+        label: Lock widget
+        defaultValue: false
+    - config:
+        type: switch
+        key: showDate
+        label: Time
+        defaultValue: true
+
+    - config:
+        type: switch
+        key: bolded
+        label: Bold text
+        defaultValue: false
+
+
+    - config:
+        type: range
+        defaultValue: 2
+        key: scale
+        label: Scale
+        from: 1
+        step: 1
+        to: 10
+    - config:
+        type: color  
+        key: widgetColor
+        label: Change color
+        defaultValue: '#FFFFFF'
+        allowAlpha: false
+
+    - config:
+        type: select
+        defaultValue: 'Monoton'
+        key: fontFamily
+        label: Date font
+        subtype: List
+        options:
+          - label: Monoton
+            value: Monoton, sans-serif
+          - label: Atomic Age
+            value: Atomic Age, sans-serif
+          - label: Arial
+            value: Arial, sans-serif
+          - label: "Roboto Condensed"
+            value: "'Roboto Condensed', sans-serif"
+          - label: "Playfair Display"
+            value: "'Playfair Display', serif"
+          - label: "Oswald"
+            value: "'Oswald', sans-serif"
+          - label: "Dancing Script"
+            value: "'Dancing Script', cursive"
+          - label: "Space Mono"
+            value: "'Space Mono', monospace"
+          - label: "Megrim"
+            value: "'Megrim', system-ui"
+
+
+    - config:
+        type: select
+        defaultValue: 'center'
+        key: align
+        label: Align
+        subtype: List
+        options:
+          - label: Center
+            value: center
+          - label: Left
+            value: left
+          - label: Right
+            value: right

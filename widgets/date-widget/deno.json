@@ -1,0 +1,26 @@
+{
+  "tasks": {
+    "build": "deno run -A build.ts",
+    "load": "seelen-ui widget load ./dist --as date-widget",
+    "unload": "seelen-ui widget remove date-widget",
+    "dev": "deno task unload && deno task build --dev && deno task load"
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.2.6-next.20250603045140",
+    "esbuild": "npm:esbuild@^0.25.4"
+  },
+  "compilerOptions": {
+    "assets": {
+      "include": ["src/fonts/**/*"]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable"
+    ],
+    "jsx": "react-jsx"
+  }
+  
+}
