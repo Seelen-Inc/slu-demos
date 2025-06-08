@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Megrim&family=Monoton&display=swap');
+.clock[data-align="left"] #date2,
+.clock[data-align="left"] #time {
+  padding-left: 20px;
+}
+
+.clock[data-align="right"] #date2,
+.clock[data-align="right"] #time {
+  padding-right: 20px;
+}
+
+
+
+.clock[data-bold="true"] #date{
+  font-weight: bold;
+}
+
+
+
+
+
+
+body {
+  /* avoid scroll */
+  overflow: hidden;
+}
+
+#root {
+  /* allow the window to be dragged from that element including children */
+  [data-tauri-drag-region="true"] {
+    -webkit-app-region: drag;
+  }
+
+  [data-tauri-drag-region="false"] {
+    -webkit-app-region: no-drag;
+  }
+}
+
+.example {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.clock {
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  text-align: var(--align-widget);
+  color: var(--widget-color);
+}
+
+#time {
+  font-size: calc((1 + var(--font-scale, 2)/10) * 0.9rem);
+  font-weight: bold;
+  margin-bottom: 8px;
+  opacity: var(--date-opacity);
+}
+
+#date {
+  font-family: var(--font-family, "'Roboto', sans-serif");
+  font-style: normal;
+  font-size: calc((1 + var(--font-scale, 2)/10) * 4rem);
+  opacity: 0.9;
+}
+#date2 {
+  font-size: calc((1 + var(--font-scale, 2)/10) * 0.9rem);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
