@@ -7,8 +7,7 @@
   },
   "nodeModulesDir": "auto",
   "imports": {
-    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.2.6-next.20250602004526",
-    "esbuild": "npm:esbuild@^0.25.4"
+    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.2.6-next.20250602004526"
   },
   "compilerOptions": {
     "lib": [

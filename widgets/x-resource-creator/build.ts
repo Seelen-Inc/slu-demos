@@ -23,9 +23,6 @@ const builder = await esbuild.context({
   platform: "browser",
   format: "esm",
   outdir: "./dist",
-  loader: {
-    ".yml": "text",
-  },
   jsx: "automatic", // in case you use JSX (react)
 });
 

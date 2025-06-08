@@ -1,0 +1,25 @@
+{
+  "tasks": {
+    "build": "deno run -A --node-modules-dir npm:vite build",
+    "load": "seelen-ui widget load ./dist --as x-desktop-media-player",
+    "unload": "seelen-ui widget remove x-desktop-media-player",
+    "dev": "deno task unload && deno task build -- --dev && deno task load"
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.3.6-next.20250605212630",
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
+    "@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^5.0.3",
+    "svelte": "npm:svelte@^5.20.2",
+    "vite": "npm:vite@^6.1.1"
+  },
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable"
+    ],
+    "jsx": "react-jsx"
+  }
+}

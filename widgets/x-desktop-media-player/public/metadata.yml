@@ -1,0 +1,390 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Seelen-Inc/slu-lib/refs/heads/master/gen/schemas/theme.schema.json
+id: '@eythaann/desktop-media-player'
+icon: MdLibraryMusic
+metadata:
+  displayName:
+    en: Desktop Media Player
+    af: Lessenaar mediaspeler
+    az: Masaüstü media pleyeri
+    bs: Desktop Media Player
+    ca: Reproductor multimèdia d'escriptori
+    cs: Přehrávač médií pro stolní počítače
+    cy: Chwaraewr cyfryngau bwrdd gwaith
+    da: Desktop Media Player
+    de: Desktop Media Player
+    et: Töölaua meediumipleier
+    es: Reproductor multimedia de escritorio
+    eu: Mahaigaineko multimedia erreproduzitzailea
+    tl: Desktop Media Player
+    fr: Lecteur multimédia de bureau
+    hr: Desktop Media Player
+    id: Pemutar Media Desktop
+    zu: Isidlali semidiya yedeskithophu
+    is: Desktop Media Player
+    it: Desktop Media Player
+    sw: Mchezaji wa media ya desktop
+    ku: Player media desktop
+    lv: Galddatoru multivides atskaņotājs
+    lb: Desktop Media Player
+    lt: Stalinio medijos grotuvas
+    hu: Asztali médialejátszó
+    ms: Pemain media desktop
+    mt: Desktop Media Player
+    nl: Desktop mediaspeler
+    'no': Desktop Media Player
+    uz: Ish stoli Media pleeri
+    pl: Media Media Player
+    pt: Player de mídia para desktop
+    ro: Player media desktop
+    sk: Prehrávač médií
+    so: Desktop Media Player
+    fi: Työpöydän mediapelaaja
+    sv: Skrivbordsspelare
+    vi: Máy tính để bàn truyền thông
+    tr: Masaüstü Media Player
+    yo: Ẹrọ tabili media
+    el: Επιτραπέζια συσκευή αναπαραγωγής μέσων ενημέρωσης
+    bg: Настолен медиен плейър
+    mk: Десктоп Медија плеер
+    mn: Ширээний медиа тоглуулагч
+    ru: Настольный медиаплеер
+    sr: Десктоп Медиа Плаиер
+    tg: Медиа Player Player
+    uk: Desktop Media Player
+    ka: დესკტოპის მედია პლეერი
+    hy: Desktop Media Player
+    he: נגן מדיה שולחני
+    ur: ڈیسک ٹاپ میڈیا پلیئر
+    ar: لاعب وسائط سطح المكتب
+    ps: د ډیسټاپ میډیا لوبغاړی
+    fa: پخش کننده رسانه دسکتاپ
+    am: ዴስክቶፕ የሚዲያ ማጫወቻ
+    ne: डेस्कटप मिडिया प्लेयर
+    hi: डेस्कटॉप मीडिया प्लेयर
+    bn: ডেস্কটপ মিডিয়া প্লেয়ার
+    pa: ਡੈਸਕਟਾਪ ਮੀਡੀਆ ਪਲੇਅਰ
+    gu: ડેસ્કટ .પ મીડિયા પ્લેયર
+    ta: டெஸ்க்டாப் மீடியா பிளேயர்
+    te: డెస్క్‌టాప్ మీడియా ప్లేయర్
+    si: ඩෙස්ක්ටොප් මාධ්ය වාදකය
+    th: เครื่องเล่นสื่อเดสก์ท็อป
+    lo: ເຄື່ອງຫຼີ້ນ Media Media Desktop
+    km: កម្មវិធីចាក់មេឌៀលើតុ
+    ko: 데스크탑 미디어 플레이어
+    zh: 桌面媒体播放器
+    ja: デスクトップメディアプレーヤー
+  description:
+    en: >-
+      Adds a fancy media player widget to your desktop background. The code for
+      this widget can be found on https://github.com/Seelen-Inc/slu-demos
+    af: >-
+      Voeg 'n spoggerige mediaspeler -widget by u lessenaaragtergrond. Die kode
+      vir hierdie widget kan gevind word op
+      https://github.com/seelen-inc/slu-demos
+    az: >-
+      Masaüstünüzün fonuna xülya media oyunçusu vidjeti əlavə edir. Bu widget
+      üçün kod https://github.com/seelen-inc/slu-demos-da tapa bilərsiniz
+    bs: >-
+      Dodaje fancy Media Player Widget na vašu pozadinu radne površine. Kod za
+      ovaj widget možete pronaći na https://github.com/seelen-inc/slu-demos
+    ca: >-
+      Afegeix un widget de reproducció multimèdia de luxe al fons de
+      l'escriptori. El codi d'aquest giny es troba a
+      https://github.com/seelen-inc/slu-demos
+    cs: >-
+      Přidá na pozadí plochy fantastický widget přehrávače médií. Kód pro tento
+      widget najdete na https://github.com/seelen-inc/sla-demos
+    cy: >-
+      Yn ychwanegu teclyn chwaraewr cyfryngau ffansi at eich cefndir bwrdd
+      gwaith. Gellir gweld y cod ar gyfer y teclyn hwn ar
+      https://github.com/seelen-inc/slu-medemos
+    da: >-
+      Tilføjer en fancy medieafspiller -widget til din skrivebordsbaggrund.
+      Koden til denne widget kan findes på
+      https://github.com/seelen-inc/slu-demos
+    de: >-
+      Fügt Ihrem Desktop -Hintergrund ein ausgefallenes Media Player -Widget
+      hinzu. Der Code für dieses Widget finden Sie unter
+      https://github.com/seelen-inc/slu-demos
+    et: >-
+      Lisab teie töölaua taustale väljamõeldud meediumipleieri vidina. Selle
+      vidina koodi leiate saidilt https://github.com/seelen-inc/sludemos
+    es: >-
+      Agrega un widget de reproductor multimedia elegante a su fondo de
+      escritorio. El código para este widget se puede encontrar en
+      https://github.com/seelen-inc/slu-demos
+    eu: >-
+      Multimedia erreproduzitzailearen widget bat gehitzen du mahaigaineko
+      atzeko planoan. Widget honen kodea
+      https://github.com/seelen-in/slu-demos-en aurki daiteke
+    tl: >-
+      Nagdaragdag ng isang magarbong widget ng media player sa iyong background
+      sa desktop. Ang code para sa widget na ito ay matatagpuan sa
+      https://github.com/seelen-inc/slu-demos
+    fr: >-
+      Ajoute un widget de lecteur multimédia sophistiqué à votre fond de bureau.
+      Le code de ce widget peut être trouvé sur
+      https://github.com/seelen-inc/slu-demos
+    hr: >-
+      U pozadinu radne površine dodaje maštovit widget Media Player. Kôd za ovaj
+      widget možete pronaći na https://github.com/seelen-inc/sli-demos
+    id: >-
+      Menambahkan widget pemutar media mewah ke latar belakang desktop Anda.
+      Kode widget ini dapat ditemukan di https://github.com/seelen-inc/slu-demos
+    zu: >-
+      Ingeza iwijethi ye-Fancy Media Playerle ngemuva kwedeskithophu yakho.
+      Ikhodi yalewijethi ingatholakala ku-https:
+      //github.com/seelen-in/slu-demos
+    is: >-
+      Bætir fínum fjölmiðlaspilarabúnaði við skrifborðs bakgrunn þinn. Kóðinn
+      fyrir þessa búnað er að finna á https://github.com/seelen-inc/lu-demos
+    it: >-
+      Aggiunge un widget per lettore multimediale di fantasia allo sfondo del
+      tuo desktop. Il codice per questo widget è disponibile su
+      https://github.com/seelen-inc/slu-demos
+    sw: >-
+      Inaongeza widget ya kucheza ya media kwenye msingi wako wa desktop.
+      Nambari ya widget hii inaweza kupatikana kwenye
+      https://github.com/seelen-inc/slu-demos
+    ku: >-
+      Widgetek lîstika medyayê ya Fancy-ê zêde dike. Koda ji bo vê widgetê
+      dikare li ser https://github.com/seelen-inc/slu-demos were dîtin
+    lv: >-
+      Pievieno izdomātu multivides atskaņotāju logrīku darbvirsmas fonam. Šī
+      logrīka kods ir atrodams vietnē https://github.com/seelen-inc/slu-demos
+    lb: >-
+      Füügt e Fabréck Media Play-Placet op Ärem Desktop Hannergrond. De Code fir
+      dëse Widget kann op https://github.com/seven-inc/Slusmos fonnt ginn
+    lt: >-
+      Pridėkite išgalvotą medijos grotuvo valdiklį prie savo darbalaukio fono.
+      Šio valdiklio kodą galite rasti https://github.com/seelen-inc/slu-demos
+    hu: >-
+      Hozzáad egy divatos médialejátszó widget az asztali háttérhez. A widget
+      kódja a https://github.com/seelen-inc/slu-demos oldalon található
+    ms: >-
+      Menambah widget pemain media mewah ke latar belakang desktop anda. Kod
+      untuk widget ini boleh didapati di https://github.com/seelen-inc/slu-demos
+    mt: >-
+      Iżżid widget tal-midja tal-midja fancy mal-isfond tad-desktop tiegħek.
+      Il-kodiċi għal dan il-widget jista 'jinstab fuq
+      https://github.com/seelen-inc/slu-demos
+    nl: >-
+      Voegt een chique mediaspelerwidget toe aan uw bureaubladachtergrond. De
+      code voor deze widget is te vinden op
+      https://github.com/selen-inc/slu-demos
+    'no': >-
+      Legger til en fancy mediespiller -widget til skrivebordsbakgrunnen din.
+      Koden for denne widgeten finner du på
+      https://github.com/seelen-inc/slu-demos
+    uz: >-
+      Ish stolingiz fonida fayyor media pleerining vidjetini qo'shadi. Ushbu
+      vidjetning kodi topilishi mumkin HTTPS://github.com/seelen-dlu-demsos-da
+    pl: >-
+      Dodaje fantazyjny widżet odtwarzacza multimedialnego do tła stacjonarnego.
+      Kod tego widżetu można znaleźć na https://github.com/seelen-inc/slu-demos
+    pt: >-
+      Adiciona um widget de media player sofisticado ao seu plano de fundo da
+      área de trabalho. O código para este widget pode ser encontrado em
+      https://github.com/seelen-inc/slu-demos
+    ro: >-
+      Adăugă un widget fantezist Media Player pe fundalul desktop. Codul pentru
+      acest widget poate fi găsit pe https://github.com/seelen-inc/slu-demos
+    sk: >-
+      Pridá luxusný widget prehrávač médií na pozadie vašej pracovnej plochy.
+      Kód tejto miniaplikácie nájdete na adrese
+      https://github.com/seelen-inc/slu-deos
+    so: >-
+      Waxay ku dartay war aruxuulka warbaahineed ee farxadda leh asalka
+      desktop-kaaga. Xeerka widget-kaan waxaa laga heli karaa
+      https://gittub.com/seelen-int/slu-demos
+    fi: >-
+      Lisää hienon mediasoittimen widgetin työpöydän taustaan. Tämän widgetin
+      koodi löytyy osoitteesta https://github.com/seelen-inc/slu-demos
+    sv: >-
+      Lägger till en snygg mediaspelare -widget till din skrivbordsbakgrund.
+      Koden för denna widget finns på https://github.com/seelen-inc/slu-demos
+    vi: >-
+      Thêm một tiện ích trình phát phương tiện ưa thích vào nền máy tính để bàn
+      của bạn. Mã cho tiện ích này có thể được tìm thấy trên
+      https://github.com/seelen-inc/slu-demos
+    tr: >-
+      Masaüstü arka planınıza süslü bir medya oynatıcı widget'ı ekler. Bu
+      widget'ın kodu https://github.com/seelen-inc/slu-demos adresinde
+      bulunabilir.
+    yo: >-
+      Ṣafikun ẹrọ ailorukọ Media Fancy fun ipilẹ tabili tabili rẹ. Koodu fun ẹrọ
+      ailorukọ yii le ṣee ri lori https://gittib.com/selen-inc/slu-demos
+    el: >-
+      Προσθέτει ένα Widget Fancy Media Player στο φόντο της επιφάνειας εργασίας
+      σας. Ο κωδικός για αυτό το widget μπορεί να βρεθεί στη διεύθυνση
+      https://github.com/seelen-inc/slu-demos
+    bg: >-
+      Добавя фантазия джаджа за медиен плейър на вашия работен плот. Кодът за
+      тази джаджа можете да намерите на https://github.com/seelen-inc/slu-demos
+    mk: >-
+      Додава фенси додаток за медиа плеер во вашата позадина на работната
+      површина. Кодот за овој додаток може да се најде на
+      https://github.com/seelen-inc/slu-demos
+    mn: >-
+      Таны ширээний компьютерт сонирхолтой хэвлэл мэдээллийн хэрэгслийн
+      виджетийг нэмж оруулав. Энэ виджетийг
+      https://github.com/eallen/seelen/seelen/slu-deMOS дээрээс олж болно
+    ru: >-
+      Добавляет причудливый медиаплеерный виджет на свой рабочий стол. Код для
+      этого виджета можно найти на https://github.com/seelen-inc/slu-demos
+    sr: >-
+      Додаје додатак маштовите медиа плаиер на позадину радне површине. Код овог
+      виџета можете пронаћи на хттпс: //гитхуб.цом/сеелен-нц/слу-демос
+    tg: >-
+      Воизаи пленомаи афсонавӣ ба заминаи мизи кории шумо илова мекунад. Рамз
+      барои ин виҷет метавонад дар https://github.com/seelen- inc/slu-demos
+      пайдо шавад
+    uk: >-
+      Додає віджет Fancy Media Player до вашого робочого столу. Код цього
+      віджета можна знайти на https://github.com/selen-inc/slu-demos
+    ka: >-
+      დაამატეთ ლამაზი მედია ფლეერის ვიჯეტი თქვენს დესკტოპის ფონზე. ამ ვიჯეტის
+      კოდი შეგიძლიათ იხილოთ https://github.com/seelen-inc/slu-demos
+    hy: >-
+      Ձեր աշխատասեղանի ֆոնին ավելացնում է Fancy Media Player Widget- ը: Այս
+      widget- ի ծածկագիրը կարելի է գտնել https://github.com/seelen-inc/slu-demos
+    he: >-
+      מוסיף יישומון נגן מדיה מפואר לרקע שולחן העבודה שלך. את הקוד לווידג'ט זה
+      ניתן למצוא בכתובת https://github.com/seelen-inc/slu-demos
+    ur: >-
+      آپ کے ڈیسک ٹاپ کے پس منظر میں ایک فینسی میڈیا پلیئر ویجیٹ شامل کرتا ہے۔ اس
+      ویجیٹ کا کوڈ https://github.com/seelen-inc/slu-demos پر پایا جاسکتا ہے
+    ar: >-
+      يضيف عنصر واجهة مستخدم لاعب الوسائط الفاخرة إلى خلفية سطح المكتب. يمكن
+      العثور على الرمز لهذا القطعة على https://github.com/seelen-inc/slu-demos
+    ps: >-
+      خپل ډیسټاپ شالید ته د فینسي میډیا پلیر څخه اضافه کوي. د دې ویجیټ لپاره کوډ
+      په https://gitub.com/seeeeden-inc/shla- show/shludmos کې موندل کیدی شي
+    fa: >-
+      ویجت پخش کننده رسانه فانتزی را به پس زمینه دسک تاپ خود اضافه می کند. کد
+      این ویجت را می توان در https://github.com/seelen-inc/slu-demos یافت
+    am: >-
+      የዴስክቶፕሽን ሚዲያ አጫዋች ማጫወቻዎች ንዑስ ማጫወቻዎች ንዑስ / ክትትል ያክሉ. ለዚህ ንዑስ ፕሮግራም ኮዱ በ
+      https://github.com/sale-inc/slods ላይ ይገኛል
+    ne: >-
+      तपाईंको डेस्कटप पृष्ठभूमिमा एक फेन्सी मिडिया प्लेज थप्दछ। यस विजेटको लागि
+      कोड HTTPS:PTS ://github.com/sieedly/slu-nlogmos मा फेला पार्न सकिन्छ
+    hi: >-
+      अपने डेस्कटॉप पृष्ठभूमि में एक फैंसी मीडिया प्लेयर विजेट जोड़ता है। इस
+      विजेट के लिए कोड https://github.com/seelen-inc/slu-demos पर पाया जा सकता
+      है
+    bn: >-
+      আপনার ডেস্কটপ ব্যাকগ্রাউন্ডে একটি অভিনব মিডিয়া প্লেয়ার উইজেট যুক্ত করে।
+      এই উইজেটের কোডটি https://github.com/seelen-inc/slu-demos এ পাওয়া যাবে
+    pa: >-
+      ਤੁਹਾਡੇ ਡੈਸਕਟਾਪ ਦੇ ਪਿਛੋਕੜ ਵਿੱਚ ਇੱਕ ਫੈਂਸੀ ਮੀਡੀਆ ਪਲੇਅਰ ਵਿਜੇਟ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ.
+      ਇਸ ਵਿਜੇਟ ਲਈ ਕੋਡ https://github.com/seenlen-inc/slu-demos 'ਤੇ ਪਾਇਆ ਜਾ ਸਕਦਾ
+      ਹੈ
+    gu: >-
+      તમારી ડેસ્કટ .પ પૃષ્ઠભૂમિમાં ફેન્સી મીડિયા પ્લેયર વિજેટને ઉમેરે છે. આ
+      વિજેટ માટેનો કોડ https://github.com/seelen-inc/slu-demos પર મળી શકે છે
+    ta: >-
+      உங்கள் டெஸ்க்டாப் பின்னணியில் ஒரு ஆடம்பரமான மீடியா பிளேயர் விட்ஜெட்டை
+      சேர்க்கிறது. இந்த விட்ஜெட்டுக்கான குறியீட்டை
+      https://github.com/seelen-inc/slu-demos இல் காணலாம்
+    te: >-
+      మీ డెస్క్‌టాప్ నేపథ్యానికి ఫాన్సీ మీడియా ప్లేయర్ విడ్జెట్‌ను జోడిస్తుంది.
+      ఈ విడ్జెట్ కోసం కోడ్ https://github.com/seelen-inc/slu-demos లో చూడవచ్చు
+    si: >-
+      ඔබේ ඩෙස්ක්ටොප් පසුබිමට විසිතුරු මාධ්ය වාදක විජට් එකක් එක් කරයි. මෙම විජට්
+      සඳහා කේතය https://github.com/8EEELENE-INC/SLUEES වෙතින් සොයාගත හැකිය
+    th: >-
+      เพิ่มวิดเจ็ตเครื่องเล่นสื่อแฟนซีลงในพื้นหลังเดสก์ท็อปของคุณ
+      รหัสสำหรับวิดเจ็ตนี้สามารถพบได้ที่ https://github.com/seelen-inc/slu-demos
+    lo: >-
+      ເພີ່ມເຄື່ອງມືນັກກິລາ fancy media ໃສ່ພື້ນຫລັງ desktop ຂອງທ່ານ.
+      ລະຫັດສໍາລັບເຄື່ອງມືນີ້ສາມາດພົບໄດ້ໃນ
+      https://github.com/Selenen-inc/slu-demos
+    km: >-
+      បន្ថែមធាតុក្រាហ្វិកមេឌៀចាក់របស់ប្រព័ន្ធផ្សព្វផ្សាយល្អិតល្អន់ទៅផ្ទៃខាងក្រោយផ្ទៃតុរបស់អ្នក។
+      កូដសម្រាប់ធាតុក្រាហ្វិកនេះអាចរកបាននៅលើគេហទំព័រ
+      https://github.com/seelen-ce/slu-demos
+    ko: >-
+      데스크탑 배경에 멋진 미디어 플레이어 위젯을 추가합니다. 이 위젯의 ​​코드는
+      https://github.com/seelen-inc/slu-demos에서 찾을 수 있습니다.
+    zh: >-
+      在您的桌面背景中添加了一个高档的媒体播放器小部件。可以在https://github.com/seelen-inc/slu-demos上找到此小部件的代码
+    ja: >-
+      デスクトップの背景に派手なメディアプレーヤーウィジェットを追加します。このウィジェットのコードはhttps://github.com/seelen-inc/slu-demosにあります
+settings:
+  - group:
+      - config:
+          type: switch
+          key: locked
+          label:
+            en: Lock the widget position
+            af: Sluit die widget -posisie
+            az: Widget mövqeyini kilidləyin
+            bs: Zaključajte položaj widgeta
+            ca: Bloqueja la posició del giny
+            cs: Zamkněte polohu widgetu
+            cy: Cloi safle'r teclyn
+            da: Lås widgetpositionen
+            de: Sperren Sie die Widget -Position
+            et: Lukustage vidinapositsioon
+            es: Bloquear la posición del widget
+            eu: Blokeatu widget posizioa
+            tl: I -lock ang posisyon ng widget
+            fr: Verrouiller la position du widget
+            hr: Zaključati položaj widgeta
+            id: Kunci posisi widget
+            zu: Khiya isikhundla sewijethi
+            is: Læstu stöðu búnaðarins
+            it: Bloccare la posizione del widget
+            sw: Funga msimamo wa widget
+            ku: Pozîsyona widgetê bigire
+            lv: Bloķēt logrīka pozīciju
+            lb: Spär d'Widget Positioun
+            lt: Užrakinkite valdiklio padėtį
+            hu: Zárja be a widget helyzetét
+            ms: Kunci kedudukan widget
+            mt: Lock il-pożizzjoni tal-widget
+            nl: Vergrendel de widgetpositie
+            'no': Lås widgetposisjonen
+            uz: Vidjet holatini qulflang
+            pl: Zablokuj pozycję widżetu
+            pt: Bloquear a posição do widget
+            ro: Blocați poziția widgetului
+            sk: Zamknite polohu widget
+            so: Quful booska widget
+            fi: Lukitse widget -asento
+            sv: Lås widgetpositionen
+            vi: Khóa vị trí tiện ích
+            tr: Widget konumunu kilitle
+            yo: Titiipa ipo ẹrọ ailorukọ
+            el: Κλειδώστε τη θέση widget
+            bg: Заключете позицията на джаджата
+            mk: Заклучете ја положбата на додатокот
+            mn: Виджет байршлыг түгж
+            ru: Заблокировать позицию виджета
+            sr: Закључајте положај виџета
+            tg: Ҳолати даромадро қулф кунед
+            uk: Заблокувати положення віджетів
+            ka: ვიჯეტის პოზიციის ჩაკეტვა
+            hy: Կողպեք widget դիրքը
+            he: נעל את מיקום הווידג'ט
+            ur: ویجیٹ کی پوزیشن کو لاک کریں
+            ar: قفل موضع القطعة
+            ps: د clate موقعیت لاک کړئ
+            fa: موقعیت ویجت را قفل کنید
+            am: የግርጌ ማስታወሻውን መቆለፍ
+            ne: विजेट स्थिति लक गर्नुहोस्
+            hi: विजेट की स्थिति को लॉक करें
+            bn: উইজেট অবস্থান লক করুন
+            pa: ਵਿਜੇਟ ਸਥਿਤੀ ਨੂੰ ਲਾਕ ਕਰੋ
+            gu: વિજેટ સ્થિતિને લ lock ક કરો
+            ta: விட்ஜெட் நிலையை பூட்டவும்
+            te: విడ్జెట్ స్థానాన్ని లాక్ చేయండి
+            si: විජට් පිහිටීම අගුළු දමන්න
+            th: ล็อคตำแหน่งวิดเจ็ต
+            lo: ລັອກຕໍາແຫນ່ງ Widget
+            km: ចាក់សោទីតាំងធាតុក្រាហ្វិក
+            ko: 위젯 위치를 잠그십시오
+            zh: 锁定小部件位置
+            ja: ウィジェットの位置をロックします
+          defaultValue: false

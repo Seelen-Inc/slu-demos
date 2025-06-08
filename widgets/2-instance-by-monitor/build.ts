@@ -1,6 +1,6 @@
 /// <reference lib="deno.ns" />
 import { exists } from "jsr:@std/fs/exists";
-import esbuild from "esbuild";
+import esbuild from "npm:esbuild@0.25.5";
 
 const isProduction = !Deno.args.includes("--dev");
 
@@ -23,9 +23,6 @@ const builder = await esbuild.context({
   platform: "browser",
   format: "esm",
   outdir: "./dist",
-  loader: {
-    ".yml": "text",
-  },
   jsx: "automatic", // in case you use JSX (react)
 });
 
