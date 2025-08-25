@@ -5,7 +5,7 @@ import { Settings, Widget } from "@seelen-ui/lib";
 import "./index.css";
 
 // get the current widget instance
-const widget = await Widget.getCurrentAsync();
+const widget = Widget.getCurrent();
 const { webview } = widget;
 
 // this will be printed and saved on seelen ui logs.

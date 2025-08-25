@@ -6,7 +6,7 @@ import { App } from "./app.tsx";
 
 import "./styles/index.css";
 
-const widget = await Widget.getCurrentAsync();
+const widget = Widget.getCurrent();
 const { webview } = widget;
 
 const root = document.getElementById("root")!;

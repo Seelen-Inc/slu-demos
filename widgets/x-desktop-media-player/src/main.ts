@@ -10,7 +10,7 @@ mount(App, {
   target: document.getElementById("root")!,
 });
 
-const widget = await Widget.getCurrentAsync();
+const widget = Widget.getCurrent();
 const { webview } = widget;
 
 await widget.setAsDesktopWidget();

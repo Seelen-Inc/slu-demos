@@ -2,7 +2,7 @@ import { Widget, Color, Settings } from "@seelen-ui/lib";
 
 import "./index.css";
 
-const widget = await Widget.getCurrentAsync();
+const widget = Widget.getCurrent();
 const { webview } = widget;
 
 // set as overlay widget, (overlay widgets won't appear on the seelen dock)

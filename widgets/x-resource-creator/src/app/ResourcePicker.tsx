@@ -1,6 +1,5 @@
 import yaml from "js-yaml";
 import { ResourceKind } from "@seelen-ui/lib";
-import { useState } from "react";
 
 declare global {
   interface Window {
@@ -23,18 +22,18 @@ function getSchemaLine(kind: ResourceKind) {
 }
 
 interface Props {
+  kind: ResourceKind;
   resource: object | null;
-  onChange: (resource: object | null) => void;
+  onChangeResource: (resource: object | null) => void;
+  onChangeKind: (kind: ResourceKind) => void;
 }
 
-export function ResourcePicker({ resource, onChange }: Props) {
-  const [kind, setKind] = useState<ResourceKind>(ResourceKind.Theme);
-
+export function ResourcePicker({ resource, onChangeResource, kind, onChangeKind }: Props) {
   return (
     <div className="resource-picker">
       <label>
         <b>Resource Kind: </b>
-        <select value={kind} onChange={(e) => setKind(e.target.value as ResourceKind)}>
+        <select value={kind} onChange={(e) => onChangeKind(e.target.value as ResourceKind)}>
           {Object.values(ResourceKind).map((kind) => (
             <option key={kind}>{kind}</option>
           ))}
@@ -51,7 +50,7 @@ export function ResourcePicker({ resource, onChange }: Props) {
             reader.onload = () => {
               const yamlString = reader.result as string;
               const yamlData = yaml.load(yamlString);
-              onChange(yamlData);
+              onChangeResource(yamlData);
             };
             reader.readAsText(file);
           }
