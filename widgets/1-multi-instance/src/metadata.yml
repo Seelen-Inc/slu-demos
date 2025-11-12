@@ -6,6 +6,8 @@ metadata:
   displayName: Multi Instance widget
   description: Demo widget to test multiple instances
 instances: Multiple
+# set as desktop background widget, (background widgets won't appear on the seelen dock)
+preset: Desktop
 settings:
   - group:
       - config:

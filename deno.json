@@ -14,9 +14,9 @@
   "exclude": [
     "node_modules",
     "build",
-    "dist"
+    "**/dist/**"
   ],
   "imports": {
-    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.4.1"
+    "@seelen-ui/lib": "npm:@seelen-ui/lib@^2.4.5"
   }
 }

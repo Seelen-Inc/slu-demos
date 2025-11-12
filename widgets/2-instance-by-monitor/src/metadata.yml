@@ -6,6 +6,8 @@ metadata:
   displayName: Widget By Monitor
   description: Demo widget to test widget replica by monitor
 instances: ReplicaByMonitor
+# set as overlay widget, (overlay widgets won't appear on the seelen dock)
+preset: Overlay
 settings:
   - group:
       - config:

@@ -5,8 +5,7 @@ import "./index.css";
 const widget = Widget.getCurrent();
 const { webview } = widget;
 
-// set as overlay widget, (overlay widgets won't appear on the seelen dock)
-widget.setAsOverlayWidget();
+await widget.init();
 
 // whe using replica by monitor, all replicas will have a monitorId param.
 console.debug(`Hello world from monitor: ${widget.decoded.monitorId}`);

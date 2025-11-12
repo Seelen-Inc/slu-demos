@@ -5,8 +5,7 @@ import "./index.css";
 const widget = Widget.getCurrent();
 const { webview } = widget;
 
-// set as desktop background widget, (background widgets won't appear on the seelen dock)
-widget.setAsDesktopWidget();
+await widget.init();
 
 // whe using multiple intances, always will be one present as the main instance, this won't have an instanceId.
 // instanceId will be only present for extra instances.

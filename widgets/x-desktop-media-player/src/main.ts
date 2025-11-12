@@ -13,7 +13,7 @@ mount(App, {
 const widget = Widget.getCurrent();
 const { webview } = widget;
 
-await widget.setAsDesktopWidget();
+await widget.init();
 
 await webview.setSize(new LogicalSize(400, 120)); // set the widget initial size
 await webview.setMinSize(new LogicalSize(400, 120));
